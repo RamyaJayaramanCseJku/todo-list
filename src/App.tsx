@@ -5,7 +5,9 @@ import { ToDo } from './todo';
 function App() {
   let todosHistory: ToDo[] = JSON.parse(localStorage.getItem('notes')!);
   const [todo, setTodo] = React.useState<string | number>('');
-  const [todos, setTodos] = React.useState<ToDo[]>(todosHistory);
+  const [todos, setTodos] = React.useState<ToDo[]>(
+    todosHistory ? todosHistory : []
+  );
   React.useEffect(() => {
     localStorage.setItem('notes', JSON.stringify(todos));
   }, [todo]);
@@ -28,7 +30,6 @@ function App() {
       ]);
     }
     setTodo('');
-
     console.log(localStorage.getItem('notes'));
   };
   console.log(todo, todos);

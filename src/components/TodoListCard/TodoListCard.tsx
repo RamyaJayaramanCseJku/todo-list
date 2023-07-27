@@ -41,35 +41,36 @@ const TodoListCard = ({ todo, todos, setTodos }: Props) => {
   };
   return (
     <>
-      {todo.completed ? (
-        <span className="notes">
-          <s>{todo.notes}</s>
-        </span>
-      ) : isEdit ? (
-        <form onSubmit={(e) => handleEdit(e, todo.id)}>
+      <form onSubmit={(e) => handleEdit(e, todo.id)} className="notes">
+        {todo.completed ? (
+          <span className="notes">
+            <s>{todo.notes}</s>
+          </span>
+        ) : isEdit ? (
           <input
             type="text"
             ref={inputRef}
             value={editToDo}
+            className="editInput"
             onChange={(e) => setEditToDo(e.target.value)}
           />
-        </form>
-      ) : (
-        <span className="notes">
-          {todo.notes}
-          <span onClick={() => handleDone(todo.id)} className="actions">
-            <MdDoneOutline />
-          </span>
+        ) : (
+          <span className="notes">
+            {todo.notes}
+            <span onClick={() => handleDone(todo.id)} className="actions">
+              <MdDoneOutline />
+            </span>
 
-          <span onClick={() => openEdit()} className="actions">
-            <FaRegEdit />
-          </span>
+            <span onClick={() => openEdit()} className="actions">
+              <FaRegEdit />
+            </span>
 
-          <span onClick={() => handleDelete(todo.id)} className="actions">
-            <AiFillDelete />
+            <span onClick={() => handleDelete(todo.id)} className="actions">
+              <AiFillDelete />
+            </span>
           </span>
-        </span>
-      )}
+        )}
+      </form>
     </>
   );
 };

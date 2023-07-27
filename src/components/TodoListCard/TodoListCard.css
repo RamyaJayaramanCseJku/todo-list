@@ -21,3 +21,10 @@
 .actions {
     margin: auto;
 }
+
+.editInput {
+    margin-left: 15px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}

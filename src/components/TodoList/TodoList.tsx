@@ -10,7 +10,7 @@ function ToDoList({ todos, setTodos }: Props) {
   return (
     <div className="container">
       <div className="todos">
-        {todos.map((todo) => (
+        {todos?.map((todo) => (
           <TodoListCard todo={todo} todos={todos} setTodos={setTodos} />
         ))}
       </div>
