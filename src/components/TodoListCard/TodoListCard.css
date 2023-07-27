@@ -1,0 +1,23 @@
+.header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.notes {
+    background-color: orange;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    margin: 1px auto;
+}
+
+.notes:hover {
+    transform: scale(1.03);
+
+}
+
+.actions {
+    margin: auto;
+}

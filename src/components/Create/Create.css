@@ -1,0 +1,59 @@
+.header {
+    text-align: center;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.form {
+
+    padding: 10px;
+    margin: 50px;
+    width: device-width;
+    text-align: center;
+
+}
+
+.inputField {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    margin: 10px;
+    width: 500px;
+}
+
+.inputField:hover {
+    transform: scale(1.03);
+}
+
+.createButton {
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    background-color: rgb(115, 217, 115);
+    font-weight: bold;
+
+
+}
+
+.createButton:hover {
+    transform: scale(1.03);
+}
+
+@media only screen and (max-width:700px) {
+    .inputField {
+        padding: 10px;
+        border-radius: 10px;
+        outline: none;
+        margin: 10px;
+        width: 300px;
+    }
+
+    .form {
+
+        padding: 10px;
+        margin: 50px;
+        width: 80%;
+        text-align: center;
+    }
+
+}
